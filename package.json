@@ -1,0 +1,23 @@
+{
+  "name": "web_labs",
+  "version": "1.0.0",
+  "description": "web labs for university",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "sass": "node-sass --watch sass -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duhjent/web_labs.git"
+  },
+  "author": "duhjent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duhjent/web_labs/issues"
+  },
+  "homepage": "https://github.com/duhjent/web_labs#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
