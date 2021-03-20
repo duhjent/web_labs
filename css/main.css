@@ -1,5 +1,4 @@
 body {
-  margin: 0;
   background: #f5f5f5; }
 
 .form-login {
@@ -12,3 +11,6 @@ body {
 
 .card-text {
   margin-bottom: 10px; }
+
+.event-info {
+  width: 75%; }
