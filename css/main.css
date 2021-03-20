@@ -5,3 +5,7 @@ body {
 .form-login {
   padding: 15px;
   max-width: 330px; }
+
+.go-back {
+  left: 10px;
+  top: 10px; }
