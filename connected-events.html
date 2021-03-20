@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Events</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
@@ -19,15 +19,15 @@
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
             <div class="navbar-collapse justify-content-between">
                 <ul class="navbar-nav px-2">
-                    <li class="nav-item"><a class="nav-link active" href="javascript:void(0)">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown">
+                        <a class="nav-link active dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown">
                             Events
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="./all-events.html">All Events</a></li>
-                            <li><a class="dropdown-item" href="./connected-events.html">Connected Events</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)">Connected Events</a></li>
                             <li><a class="dropdown-item" href="./my-events.html">My Events</a></li>
                         </ul>
                     </li>
@@ -40,14 +40,8 @@
                 </ul>
             </div>
         </nav>
-        <div>
-            <h2 class="text-center py-3">
-                Welcome to web labs event management system homepage!)
-            </h2>
-            <h3 class="list-header">
-                Top 5 events this week:
-            </h3>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5">
+        <div class="my-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5">
                 <div class="col d-flex flex-items-stretch">
                     <div class="card border-dark my-1">
                         <div class="card-body d-flex flex-column">
@@ -101,6 +95,18 @@
                             <span class="h5 card-title">Lorem ipsum dolor sit.</span>
                             <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi
                                 adipisci quam provident.</div>
+                            <button class="btn btn-outline-secondary w-100 mt-auto">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col d-flex flex-items-stretch">
+                    <div class="card border-dark my-1">
+                        <div class="card-body d-flex flex-column">
+                            <span class="h5 card-title">Lorem, ipsum dolor.</span>
+                            <div class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+                                perspiciatis fugiat quasi dolorum, earum quaerat eos cum facilis quia, labore omnis
+                                aperiam
+                                voluptas iste ut. Itaque, aperiam officia.</div>
                             <button class="btn btn-outline-secondary w-100 mt-auto">Details</button>
                         </div>
                     </div>
