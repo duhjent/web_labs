@@ -21,8 +21,8 @@
                 <ul class="navbar-nav px-2">
                     <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="javascript:void(0)" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown">
+                        <a class="nav-link dropdown-toggle active" href="javascript:void(0)" id="navbarDropdown"
+                            role="button" data-bs-toggle="dropdown">
                             Events
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -42,50 +42,69 @@
         </div>
     </nav>
     <div class="container">
-        <div class="h1 py-2">Lorem ipsum dolor sit amet.</div>
+        <div class="h2 py-2">Edit Event</div>
         <div class="w-75">
             <dl class="row">
                 <dt class="col-sm-2 p-3">
-                    Description
+                    <label for="title">
+                        Title
+                    </label>
                 </dt>
                 <dd class="col-sm-10 p-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi suscipit non dolorem delectus
-                    doloribus cumque neque explicabo, tenetur ut ea, iure eligendi inventore obcaecati itaque! Esse, nam
-                    voluptate reprehenderit vel quam quibusdam asperiores iusto illo.
+                    <input type="text" class="form-control" name="title" value="lorem lorem lorem" />
+                </dd>
+                <dt class="col-sm-2 p-3">
+                    <label for="description">
+                        Description
+                    </label>
+                </dt>
+                <dd class="col-sm-10 p-3">
+                    <textarea name="description" id="description"
+                        class="form-control">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere aut libero mollitia sequi! Quidem nisi velit in, repellat maxime molestias aperiam odio unde pariatur aut?</textarea>
                 </dd>
                 <dt class="col-sm-2 p-3">
                     Date
                 </dt>
                 <dd class="col-sm-10 p-3">
-                    Lorem, ipsum dolor.
+                    <input type="date" class="form-control" />
                 </dd>
             </dl>
             <div class="h5 pb-1">
                 Participants
             </div>
-            <ul class="list-group">
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Possimus, consectetur?</li>
-                <li class="list-group-item">Repellendus, amet!</li>
-                <li class="list-group-item">Fugit, neque!</li>
-                <li class="list-group-item">Eum, nulla!</li>
-                <li class="list-group-item">Odit, voluptatem?</li>
-                <li class="list-group-item">Minima, ut?</li>
-                <li class="list-group-item">Blanditiis, labore?</li>
-                <li class="list-group-item">Facere, tenetur.</li>
-                <li class="list-group-item">Eveniet, temporibus?</li>
-                <li class="list-group-item">Corporis, eius.</li>
-                <li class="list-group-item">Hic, fuga!</li>
-                <li class="list-group-item">Explicabo, nihil.</li>
-                <li class="list-group-item">Neque, animi.</li>
-                <li class="list-group-item">Perferendis, eveniet!</li>
-                <li class="list-group-item">Veniam, nesciunt!</li>
-                <li class="list-group-item">Officiis, numquam.</li>
-                <li class="list-group-item">Iusto, deleniti.</li>
-                <li class="list-group-item">Voluptatibus, sed!</li>
-                <li class="list-group-item">Repudiandae, itaque.</li>
-                <li class="list-group-item">Fugit, ipsum?</li>
-                <li class="list-group-item">Unde, nulla.</li>
+            <ul class="list-group pb-3">
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>Lorem, ipsum.</div>
+                    <button class="btn btn-secondary btn-sm">remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>Possimus, consectetur?</div>
+                    <button class="btn btn-secondary btn-sm">remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>Repellendus, amet!</div>
+                    <button class="btn btn-secondary btn-sm">remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>Fugit, neque!</div>
+                    <button class="btn btn-secondary btn-sm">remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>Eum, nulla!</div>
+                    <button class="btn btn-secondary btn-sm">remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>Odit, voluptatem?</div>
+                    <button class="btn btn-secondary btn-sm">remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <div>Minima, ut?</div>
+                    <button class="btn btn-secondary btn-sm">remove</button>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                    <input type="text" class="form-control w-25" />
+                    <button class="btn btn-add-user">add user</button>
+                </li>
             </ul>
         </div>
     </div>
