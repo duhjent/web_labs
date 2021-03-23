@@ -17,24 +17,37 @@
         <form>
             <h1 class="h3 mb-3 fw-normal text-center">Register</h1>
             <label for="username">Username</label>
-            <input required type="text" class="form-control mb-1" id="username" placeholder="Username">
+            <input required type="text" class="form-control" id="username" placeholder="Username">
+            <div class="invalid-feedback d-block mb-1">
+                Ivalid username.
+            </div>
             <label for="email">Email</label>
-            <input required type="email" class="form-control mb-1" id="email" placeholder="E-Mail">
+            <input required type="email" class="form-control" id="email" placeholder="E-Mail">
+            <div class="invalid-feedback d-block mb-1">
+                Ivalid email.
+            </div>
             <label for="password">Password</label>
-            <input required type="password" class="form-control mb-1" id="password" placeholder="Password">
+            <input required type="password" class="form-control" id="password" placeholder="Password">
+            <div class="invalid-feedback d-block mb-1">
+                Password must be 8-16 chars long, have upper and lower case letters, non-alphanumeric symbols and digits.
+            </div>
             <label for="confirm-password">Confirm password</label>
-            <input required type="password" class="form-control mb-1" id="confirm-password"
-                placeholder="Confirm password">
+            <input required type="password" class="form-control" id="confirm-password" placeholder="Confirm password">
+            <div class="invalid-feedback d-block mb-1">
+                Passwords don't match.
+            </div>
             <label for="role">Select role</label>
-            <select name="role" id="role" class="form-select mb-3">
-                <option selected>Select a role</option>
+            <select required name="role" id="role" class="form-select">
+                <option value="">Select a role</option>
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
                 <option value="main-admin">Main Admin</option>
             </select>
+            <div class="invalid-feedback d-block mb-3">
+                You need to assign a role.
+            </div>
 
-            <input class="btn btn-primary btn-lg w-100" type="submit" value="Register">
-            <a href="./register-invalid.html" class="text-muted">Invalid screen</a>
+            <input class="btn btn-primary btn-lg w-100" type="submit" value="Register" />
         </form>
     </main>
 </body>
