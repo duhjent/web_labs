@@ -15,32 +15,11 @@
 </head>
 
 <body class="h-100 d-flex flex-column">
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
-        <div class="container">
-            <div class="navbar-collapse justify-content-between">
-                <ul class="navbar-nav px-2">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="javascript:void(0)" id="navbarDropdown"
-                            role="button" data-bs-toggle="dropdown">
-                            Events
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="javascript:void(0)">All Events</a></li>
-                            <li><a class="dropdown-item" href="./connected-events.html">Connected Events</a></li>
-                            <li><a class="dropdown-item" href="./my-events.html">My Events</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="./users.html">Users</a></li>
-                </ul>
-                <ul class="navbar-nav px-2">
-                    <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./login.html">Log In</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./logout.html">Log Out</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div id="nav-elem"></div>
+    <script type="module">
+        import { mountHeader } from './js/header.js'
+        mountHeader('nav-elem', '../header.html');
+    </script>
     <div class="bg-light p-4 mb-3">
         <div class="container text-center">
             <span class="h2">

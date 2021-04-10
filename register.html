@@ -14,8 +14,11 @@
 <body class="d-flex align-items-center h-100">
     <button class="btn btn-secondary position-absolute go-back" onclick="history.back()">&larr; Go back</button>
     <main class="form-login w-100 m-auto">
-        <form>
+        <form id="reg-form">
             <h1 class="h3 mb-3 fw-normal text-center">Register</h1>
+            <div class="invalid-feedback mb-1" id="error-message">
+                Error happened, try again
+            </div>
             <label for="username">Username</label>
             <input required type="text" class="form-control mb-1" id="username" placeholder="Username">
             <label for="email">Email</label>
@@ -25,18 +28,50 @@
             <label for="confirm-password">Confirm password</label>
             <input required type="password" class="form-control mb-1" id="confirm-password"
                 placeholder="Confirm password">
+            <div class="invalid-feedback mb-1" id="passwords-dont-match">
+                Passwords don't match.
+            </div>
             <label for="role">Select role</label>
             <select name="role" id="role" class="form-select mb-3">
                 <option selected>Select a role</option>
                 <option value="user">User</option>
                 <option value="admin">Admin</option>
-                <option value="main-admin">Main Admin</option>
             </select>
 
             <input class="btn btn-primary btn-lg w-100" type="submit" value="Register">
             <a href="./register-invalid.html" class="text-muted">Invalid screen</a>
         </form>
     </main>
+
+    <script type="module">
+        import { authService } from "./js/auth-service.js";
+        import { homePage } from "./js/constants.js";
+        
+        const regForm = document.querySelector('#reg-form');
+        regForm.onsubmit = async evt => {
+            evt.preventDefault();
+            if (regForm.elements['password'].value === regForm.elements['confirm-password'].value) {
+                const regFormBody = {
+                    userName: regForm.elements['username'].value,
+                    email: regForm.elements['email'].value,
+                    password: regForm.elements['password'].value,
+                    role: regForm.elements['role'].value
+                };
+                try {
+                    await authService.register(regFormBody);
+                } catch (error) {
+                    const errElem = document.querySelector('#error-message');
+                    errElem.style.display = 'block';
+                }
+                window.location.replace(homePage);
+            } else {
+                const elem = document.querySelector('#passwords-dont-match');
+                console.log(elem.style);
+                elem.style.display = 'block';
+                console.log(elem.style);
+            }
+        };
+    </script>
 </body>
 
 </html>
