@@ -23,11 +23,10 @@ class AuthService {
 
     isAuthenticated() {
         const token = localStorage.getItem(tokenName);
-        try {
-            const parsedToken = parseJwt(token);
-        } catch (error) {
+        if (!token) {
             return false;
         }
+        const parsedToken = parseJwt(token);
         const expDateTime = new Date(parsedToken.exp);
         const result = expDateTime < Date.now();
 
