@@ -4,8 +4,16 @@ import { parseJwt } from "./helpers.js";
 const tokenName = 'authToken';
 
 class AuthService {
-    authenticate(username, password) {
-        fetch(`${baseUrl}/api/users/login?username=${username}&passowrd=${password}`)
+    async authenticate(username, password) {
+        try {
+            const resp = await fetch(`${baseUrl}/api/users/login?username=${username}&password=${password}`);
+            const respBody = await resp.text();
+            localStorage.setItem(tokenName, respBody);
+        } catch (errror) {
+            console.log(error);
+        }
+
+        fetch(`${baseUrl}/api/users/login?username=${username}&password=${password}`)
             .then(resp => resp.text().then(x => localStorage.setItem(tokenName, x)))
             .catch(err => {
                 console.log(err);
