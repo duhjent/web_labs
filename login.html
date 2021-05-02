@@ -31,7 +31,7 @@
         loginForm.addEventListener('submit', evt => {
             evt.preventDefault();
             try {
-                authService.authenticate(loginForm.elements['username'], loginForm.elements['password']);
+                authService.authenticate(loginForm.elements['username'].value, loginForm.elements['password'].value);
             } catch {
                 document.querySelector('#invalid-credentials').style.display = 'block';
             }
