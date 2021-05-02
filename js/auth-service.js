@@ -5,20 +5,11 @@ const tokenName = 'authToken';
 
 class AuthService {
     async authenticate(username, password) {
-        try {
-            const resp = await fetch(`${baseUrl}/api/users/login?username=${username}&password=${password}`);
-            const respBody = await resp.text();
-            localStorage.setItem(tokenName, respBody);
-        } catch (errror) {
-            console.log(error);
-        }
-
-        fetch(`${baseUrl}/api/users/login?username=${username}&password=${password}`)
-            .then(resp => resp.text().then(x => localStorage.setItem(tokenName, x)))
-            .catch(err => {
-                console.log(err);
-                throw new 'Authentication error';
-            });
+        const resp = await fetch(`${baseUrl}/api/users/login?username=${username}&password=${password}`, { method: 'GET' }).then(resp => {
+            resp.text().then(token => {
+                localStorage.setItem(tokenName, token);
+            })
+        });
     }
 
     isAuthenticated() {

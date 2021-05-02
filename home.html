@@ -18,79 +18,13 @@
     <div id="nav-elem"></div>
     <script type="module">
         import { mountHeader } from './js/header.js';
-        mountHeader('nav-elem', '../header.html');
+        mountHeader('nav-elem');
     </script>
-    <div class="bg-light">
-        <div class="container text-center pt-5 mb-3">
-            <span class="h2 d-block pb-2">
-                Welcome to web labs event management system homepage!)
-            </span>
-            <span class="h3">
-                Top 5 events this week:
-            </span>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5">
-            <div class="col d-flex flex-items-stretch">
-                <div class="card border-dark my-1">
-                    <div class="card-body d-flex flex-column">
-                        <span class="h5 card-title">Lorem ipsum dolor sit amet.</span>
-                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-                            similique cupiditate, impedit eius distinctio commodi vitae vero omnis fuga explicabo.
-                        </div>
-                        <a class="btn btn-outline-secondary w-100 mt-auto" href="./event-details.html">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex flex-items-stretch">
-                <div class="card border-dark my-1">
-                    <div class="card-body d-flex flex-column">
-                        <span class="h5 card-title">Lorem ipsum dolor sit.</span>
-                        <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-                            exercitationem deserunt voluptatibus! Optio esse veniam quis. Nulla non voluptatem
-                            explicabo
-                            quia! Assumenda autem delectus quas perferendis numquam magnam, at rerum.</div>
-                        <a class="btn btn-outline-secondary w-100 mt-auto" href="./event-details.html">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex flex-items-stretch">
-                <div class="card border-dark my-1">
-                    <div class="card-body d-flex flex-column">
-                        <span class="h5 card-title">Lorem ipsum dolor sit amet.</span>
-                        <div class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
-                            repellat
-                            perspiciatis repudiandae tempora earum quaerat ab quia? Ipsa aspernatur veniam
-                            distinctio
-                            libero iusto id labore iste ipsam!</div>
-                        <a class="btn btn-outline-secondary w-100 mt-auto" href="./event-details.html">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex flex-items-stretch">
-                <div class="card border-dark my-1">
-                    <div class="card-body d-flex flex-column">
-                        <span class="h5 card-title">Lorem ipsum, dolor sit amet consectetur adipisicing.</span>
-                        <div class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                            Exercitationem
-                            non error blanditiis cum ad ut eveniet aliquam eaque? Modi, explicabo?</div>
-                        <a class="btn btn-outline-secondary w-100 mt-auto" href="./event-details.html">Details</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col d-flex flex-items-stretch">
-                <div class="card border-dark my-1">
-                    <div class="card-body d-flex flex-column">
-                        <span class="h5 card-title">Lorem ipsum dolor sit.</span>
-                        <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo sequi
-                            adipisci quam provident.</div>
-                        <a class="btn btn-outline-secondary w-100 mt-auto" href="./event-details.html">Details</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="mount-app"></div>
+    <script type="module">
+        import { mountHome } from "./js/home.js";
+        mountHome('#mount-app');
+    </script>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
             <span class="text-muted">

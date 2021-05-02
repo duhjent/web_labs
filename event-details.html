@@ -17,57 +17,17 @@
 <body class="h-100 d-flex flex-column">
     <div id="nav-elem"></div>
     <script type="module">
-        import { mountHeader } from './js/header.js'
-        mountHeader('nav-elem', '../header.html');
+        import { mountHeader } from './js/header.js';
+        import { mountEvtDetails } from './js/events-functions.js';
+        mountHeader('nav-elem');
+
+        const params = new URLSearchParams(window.location.search);
+        console.log(params.get('id'));
+        const evtId = +params.get('id');
+
+        mountEvtDetails('#mount-details', evtId);
     </script>
-    <div class="container">
-        <div class="h1 py-2">Lorem ipsum dolor sit amet.</div>
-        <div class="w-75">
-            <dl class="row">
-                <dt class="col-sm-2 p-3">
-                    Description
-                </dt>
-                <dd class="col-sm-10 p-3">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi suscipit non dolorem delectus
-                    doloribus cumque neque explicabo, tenetur ut ea, iure eligendi inventore obcaecati itaque! Esse, nam
-                    voluptate reprehenderit vel quam quibusdam asperiores iusto illo.
-                </dd>
-                <dt class="col-sm-2 p-3">
-                    Date
-                </dt>
-                <dd class="col-sm-10 p-3">
-                    Lorem, ipsum dolor.
-                </dd>
-            </dl>
-            <div class="h5 pb-1">
-                Participants
-            </div>
-            <ul class="list-group">
-                <li class="list-group-item">Lorem, ipsum.</li>
-                <li class="list-group-item">Possimus, consectetur?</li>
-                <li class="list-group-item">Repellendus, amet!</li>
-                <li class="list-group-item">Fugit, neque!</li>
-                <li class="list-group-item">Eum, nulla!</li>
-                <li class="list-group-item">Odit, voluptatem?</li>
-                <li class="list-group-item">Minima, ut?</li>
-                <li class="list-group-item">Blanditiis, labore?</li>
-                <li class="list-group-item">Facere, tenetur.</li>
-                <li class="list-group-item">Eveniet, temporibus?</li>
-                <li class="list-group-item">Corporis, eius.</li>
-                <li class="list-group-item">Hic, fuga!</li>
-                <li class="list-group-item">Explicabo, nihil.</li>
-                <li class="list-group-item">Neque, animi.</li>
-                <li class="list-group-item">Perferendis, eveniet!</li>
-                <li class="list-group-item">Veniam, nesciunt!</li>
-                <li class="list-group-item">Officiis, numquam.</li>
-                <li class="list-group-item">Iusto, deleniti.</li>
-                <li class="list-group-item">Voluptatibus, sed!</li>
-                <li class="list-group-item">Repudiandae, itaque.</li>
-                <li class="list-group-item">Fugit, ipsum?</li>
-                <li class="list-group-item">Unde, nulla.</li>
-            </ul>
-        </div>
-    </div>
+    <div id="mount-details" class="container"></div>
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container">
             <span class="text-muted">

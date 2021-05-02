@@ -18,7 +18,7 @@
     <div id="nav-elem"></div>
     <script type="module">
         import { mountHeader } from './js/header.js'
-        mountHeader('nav-elem', '../header.html');
+        mountHeader('nav-elem');
     </script>
         <div class="bg-light p-3 mb-3">
             <div class="container text-center">
@@ -32,53 +32,11 @@
         </div>
         <div class="container">
         <div class="my-3">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5">
-                <div class="col d-flex flex-items-stretch py-2">
-                    <div class="card border-dark my-1">
-                        <div class="card-body d-flex flex-column">
-                            <span class="h5 card-title">Lorem ipsum dolor sit amet.</span>
-                            <div class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-                                similique cupiditate, impedit eius distinctio commodi vitae vero omnis fuga explicabo.
-                            </div>
-                            <div class="btn-group mt-auto">
-                                <button class="btn btn-outline-secondary">Details</button>
-                                <a class="btn btn-outline-secondary" href="./event-edit.html">Edit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col d-flex flex-items-stretch py-2">
-                    <div class="card border-dark my-1">
-                        <div class="card-body d-flex flex-column">
-                            <span class="h5 card-title">Lorem ipsum dolor sit.</span>
-                            <div class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea
-                                exercitationem deserunt voluptatibus! Optio esse veniam quis. Nulla non voluptatem
-                                explicabo
-                                quia! Assumenda autem delectus quas perferendis numquam magnam, at rerum.</div>
-                            <div class="btn-group mt-auto">
-                                <button class="btn btn-outline-secondary">Details</button>
-                                <a class="btn btn-outline-secondary" href="./event-edit.html">Edit</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col d-flex flex-items-stretch py-2">
-                    <div class="card border-dark my-1">
-                        <div class="card-body d-flex flex-column">
-                            <span class="h5 card-title">Lorem ipsum dolor sit amet.</span>
-                            <div class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
-                                repellat
-                                perspiciatis repudiandae tempora earum quaerat ab quia? Ipsa aspernatur veniam
-                                distinctio
-                                libero iusto id labore iste ipsam!</div>
-                            <div class="btn-group mt-auto">
-                                <button class="btn btn-outline-secondary">Details</button>
-                                <a class="btn btn-outline-secondary" href="./event-edit.html">Edit</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 row-cols-xxl-5" id="evt-list">
+                <script type="module">
+                    import { renderMyEvents } from './js/events-functions.js';
+                    renderMyEvents('#evt-list');
+                </script>
             </div>
         </div>
     </div>
