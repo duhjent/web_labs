@@ -6,6 +6,6 @@ import { Component, OnInit } from "@angular/core";
 })
 export class EventDetailsPage implements OnInit {
     ngOnInit(): void {
-        throw new Error("Method not implemented.");
+        // TODO: implement
     }
 }

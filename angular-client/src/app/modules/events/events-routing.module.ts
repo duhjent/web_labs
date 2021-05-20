@@ -7,7 +7,7 @@ import { MyEventsPage } from "./pages/my-events/my-events.page";
 
 const routes: Routes = [
     {
-        path: '', redirectTo: 'all', pathMatch: 'full'
+        path: '', redirectTo: '/all', pathMatch: 'full'
     },
     {
         path: 'all', component: AllEVentsPage
