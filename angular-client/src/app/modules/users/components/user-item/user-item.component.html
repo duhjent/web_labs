@@ -1,0 +1,10 @@
+<td *ngIf="!isEditing">{{userModel.userName}}</td>
+<td *ngIf="!isEditing">{{userModel.email}}</td>
+<td *ngIf="isEditing"><input type="text" name="user-name" id="user-name" [(ngModel)]="internalModel.userName" /></td>
+<td *ngIf="isEditing"><input type="text" name="email" id="email" [(ngModel)]="internalModel.email" /></td>
+<td class="text-end">
+    <a (click)="toggleEditing()" *ngIf="!isEditing" class="btn btn-sm btn-secondary mx-1">edit</a>
+    <a (click)="saveUser()" *ngIf="isEditing" class="btn btn-sm btn-secondary mx-1">save</a>
+    <button class="btn btn-sm btn-secondary mx-1" (click)="deleteUser()">delete</button>
+    <button class="btn btn-sm btn-secondary mx-1" type="button" data-bs-toggle="collapse"
+        data-bs-target="#eventsCollapse1" aria-expanded="false" aria-controls="eventsCollapse1">events</button>

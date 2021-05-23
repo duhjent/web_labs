@@ -1,3 +1,14 @@
 <div>
-    USERS PAGE
+    <table class="table mt-2">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col" class="text-end">Controls</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr app-user-item *ngFor="let user of users | async" [userModel]="user" (userModelChange)="updateUser(user, $event)" (onDelete)="onUserDelete(user.userName)"></tr>
+        </tbody>
+    </table>
 </div>

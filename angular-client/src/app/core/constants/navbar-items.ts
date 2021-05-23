@@ -28,10 +28,6 @@ export const rightNavbarItemsLoggedOut: NavbarItemModel[] = [
 
 export const rightNavbarItemsLoggedIn: NavbarItemModel[] = [
     {
-        displayName: 'Profile',
-        route: ['users', 'me']
-    },
-    {
         displayName: 'Log Out',
         route: 'logout'
     }
