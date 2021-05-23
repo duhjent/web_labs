@@ -1,0 +1,16 @@
+<div class="text-center d-flex align-items-center h-100">
+    <main class="form-login w-100 m-auto">
+        <form id="login-form" [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+            <h1 class="h3 mb-3 fw-normal">Please Log In</h1>
+            <label for="username" class="visually-hidden">Username</label>
+            <input type="text" class="form-control mb-n1" id="username" placeholder="Username" formControlName="userName">
+            <label for="password" class="visually-hidden">Password</label>
+            <input type="password" class="form-control mb-2" id="password" placeholder="Password" formControlName="password">
+            <div class="invalid-feedback mb-1 d-block" *ngIf="invalidCredentials">
+                Ivalid credentials.
+            </div>
+            <button class="btn btn-primary btn-lg w-100" [disabled]="!formGroup.valid">Log In</button>
+        </form>
+        <a class="btn btn-secondary btn-lg w-100 mt-3" routerLink="/register">Register</a>
+    </main>
+</div>

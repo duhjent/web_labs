@@ -1,4 +1,4 @@
 export interface NavbarItemModel {
     displayName: string;
-    route: string;
+    route: string | string[];
 }

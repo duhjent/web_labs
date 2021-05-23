@@ -3,7 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullLayoutComponent } from './core/components/full-layout/full-layout.component';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
 import { SimpleLayoutComponent } from './core/components/simple-layout/simple-layout.component';
-import { LoginPage } from './modules/users/pages/login/login.page';
+import { LoginPage } from './core/pages/login/login.page';
+import { LogoutPage } from './core/pages/logout/logout.page';
+import { RegisterPage } from './core/pages/register/register.page';
 
 const routes: Routes = [
   {
@@ -32,6 +34,28 @@ const routes: Routes = [
       {
         path: '',
         component: LoginPage,
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: 'logout',
+    component: SimpleLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: LogoutPage,
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: 'register',
+    component: SimpleLayoutComponent,
+    children: [
+      {
+        path: '',
+        component: RegisterPage,
         pathMatch: 'full'
       }
     ]

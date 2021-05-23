@@ -1,4 +1,5 @@
 import { NgModule } from "@angular/core";
+import { CoreModule } from "src/app/core/core.module";
 import { SharedModule } from "../shared/shared.module";
 import { EventsRoutingModule } from "./events-routing.module";
 import { AllEVentsPage } from "./pages/all-events/all-events.page";
@@ -16,6 +17,7 @@ import { EventService } from "./services/event.service";
     ],
     imports: [
         EventsRoutingModule,
+        CoreModule,
         SharedModule
     ],
     providers: [

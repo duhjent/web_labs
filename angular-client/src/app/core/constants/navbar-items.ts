@@ -7,7 +7,7 @@ export const leftNavbarItems: NavbarItemModel[] = [
     },
     {
         displayName: 'Events',
-        route: 'events'
+        route: ['events', 'all']
     },
     {
         displayName: 'Users',
@@ -29,7 +29,7 @@ export const rightNavbarItemsLoggedOut: NavbarItemModel[] = [
 export const rightNavbarItemsLoggedIn: NavbarItemModel[] = [
     {
         displayName: 'Profile',
-        route: 'users/me'
+        route: ['users', 'me']
     },
     {
         displayName: 'Log Out',
