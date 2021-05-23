@@ -2,10 +2,25 @@
     <div class="container">
         <div class="navbar-collapse justify-content-between">
             <ul class="navbar-nav px-2">
-                <li class="nav-item" *ngFor="let item of leftItems"><a class="nav-link" [routerLink]="item.route">{{item.displayName}}</a></li>
+                <li class="nav-item" [ngClass]="{'dropdown': item.expandable}" *ngFor="let item of leftItems">
+                    <a class="nav-link" [routerLink]="item.route" *ngIf="!item.expandable"
+                        routerLinkActive="active">{{item.displayName}}</a>
+                    <a class="nav-link dropdown-toggle" *ngIf="item.expandable" [id]="item.id"
+                        role="button" data-bs-toggle="dropdown" href="javascript:void(0)">
+                        {{item.displayName}}
+                    </a>
+                    <ul class="dropdown-menu" [attr.aria-labelledby]="item.id" *ngIf="item.expandable">
+                        <li *ngFor="let subItem of item.subItems">
+                            <a class="dropdown-item" [routerLink]="subItem.route">
+                                {{subItem.displayName}}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <ul class="navbar-nav px-2">
-                <li class="nav-item" *ngFor="let item of rightItems"><a class="nav-link" [routerLink]="item.route" routerLinkActive="active">{{item.displayName}}</a></li>
+                <li class="nav-item" *ngFor="let item of rightItems"><a class="nav-link" [routerLink]="item.route"
+                        routerLinkActive="active">{{item.displayName}}</a></li>
             </ul>
         </div>
     </div>

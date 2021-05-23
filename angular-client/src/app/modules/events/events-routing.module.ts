@@ -2,9 +2,11 @@ import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AllEVentsPage } from "./pages/all-events/all-events.page";
 import { ConnectedEventsPage } from "./pages/connected-events/connected-events.page";
+import { CreateEventPage } from "./pages/create-event/create-event.page";
+import { EditEventPage } from "./pages/edit-event/edit-event.page";
 import { EventDetailsPage } from "./pages/event-details/event-details.page";
 import { HomePage } from "./pages/home/home.page";
-import { MyEventsPage } from "./pages/my-events/my-events.page";
+import { OrganizedEventsPage } from "./pages/organized-events/organized-events.page";
 
 const routes: Routes = [
     {
@@ -21,10 +23,16 @@ const routes: Routes = [
         path: 'connected', component: ConnectedEventsPage
     },
     {
-        path: 'my', component: MyEventsPage
+        path: 'organized', component: OrganizedEventsPage
+    },
+    {
+        path: 'create', component: CreateEventPage
     },
     {
         path: ':id', component: EventDetailsPage
+    },
+    {
+        path: ':id/edit', component: EditEventPage
     }
 ]
 

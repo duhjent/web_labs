@@ -4,10 +4,10 @@ import { EventModel } from "src/app/core/models/event.model";
 import { EventService } from "../../services/event.service";
 
 @Component({
-    selector: 'app-connected-events',
-    templateUrl: './connected-events.page.html'
+    selector: 'app-my-events',
+    templateUrl: './organized-events.page.html'
 })
-export class ConnectedEventsPage implements OnInit {
+export class OrganizedEventsPage implements OnInit {
     events: Observable<EventModel[]>;
     
     constructor(private eventService: EventService) { }
@@ -17,6 +17,6 @@ export class ConnectedEventsPage implements OnInit {
     }
 
     fetchEvents() {
-        this.events = this.eventService.getConnected();
+        this.events = this.eventService.getOrganized();
     }
 }

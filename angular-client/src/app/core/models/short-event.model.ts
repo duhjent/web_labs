@@ -1,5 +1,5 @@
 export class ShortEventModel {
-    id: number;
+    id?: number;
     name: string;
     description: string;
     eventDate: Date;

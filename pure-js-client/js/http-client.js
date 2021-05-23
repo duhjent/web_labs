@@ -10,7 +10,7 @@ class HttpClient {
         });
 
         if (resp.status === 401) {
-            window.location.replace('login.html');
+            // window.location.replace('login.html');
         }
 
         const respObj = await resp.json();

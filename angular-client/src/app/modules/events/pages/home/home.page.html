@@ -1,3 +1,17 @@
 <div>
-    HOME PAGE
+    <div class="bg-light">
+        <div class="container text-center pt-5 mb-3">
+            <span class="h2 d-block pb-2">
+                Welcome to web labs event management system homepage!)
+            </span>
+            <span class="h3">
+                Top 5 events this week:
+            </span>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5">
+            <app-event-item *ngFor="let event of events | async" [eventItem]="event" [isEditable]="false"></app-event-item>
+        </div>
+    </div>
 </div>

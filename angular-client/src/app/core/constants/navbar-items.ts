@@ -7,7 +7,22 @@ export const leftNavbarItems: NavbarItemModel[] = [
     },
     {
         displayName: 'Events',
-        route: ['events', 'all']
+        expandable: true,
+        subItems: [
+            {
+                displayName: 'All Events',
+                route: ['events', 'all']
+            },
+            {
+                displayName: 'Connected Events',
+                route: ['events', 'connected']
+            },
+            {
+                displayName: 'Organized Events',
+                route: ['events', 'organized']
+            }
+        ],
+        id: 'events'
     },
     {
         displayName: 'Users',

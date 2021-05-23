@@ -1,0 +1,11 @@
+<div class="card border-dark w-100">
+    <div class="card-body d-flex flex-column">
+        <span class="h5 card-title">{{eventItem.name}}</span>
+        <div class="card-text">{{eventItem.description}}</div>
+        <a *ngIf="!isEditable" class="btn btn-outline-secondary w-100 mt-auto" [routerLink]="['/events', '' + eventItem.id]">Details</a>
+        <div *ngIf="isEditable" class="btn-group mt-auto">
+            <button class="btn btn-outline-secondary" [routerLink]="['/events', '' + eventItem.id]">Details</button>
+            <a class="btn btn-outline-secondary" [routerLink]="['/events', '' + eventItem.id, 'edit']">Edit</a>
+        </div>
+    </div>
+</div>

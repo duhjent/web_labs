@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FullLayoutComponent } from './core/components/full-layout/full-layout.component';
 import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
 import { SimpleLayoutComponent } from './core/components/simple-layout/simple-layout.component';
+import { AuthGuard } from './core/guards/auth.guard';
+import { NoAuthGuard } from './core/guards/no-auth.guard';
 import { LoginPage } from './core/pages/login/login.page';
 import { LogoutPage } from './core/pages/logout/logout.page';
 import { RegisterPage } from './core/pages/register/register.page';
@@ -11,6 +13,7 @@ const routes: Routes = [
   {
     path: '',
     component: FullLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -30,6 +33,7 @@ const routes: Routes = [
   {
     path: 'login',
     component: SimpleLayoutComponent,
+    canActivate: [NoAuthGuard],
     children: [
       {
         path: '',
@@ -41,6 +45,7 @@ const routes: Routes = [
   {
     path: 'logout',
     component: SimpleLayoutComponent,
+    canActivate: [AuthGuard],
     children: [
       {
         path: '',
@@ -52,6 +57,7 @@ const routes: Routes = [
   {
     path: 'register',
     component: SimpleLayoutComponent,
+    canActivate: [NoAuthGuard],
     children: [
       {
         path: '',
