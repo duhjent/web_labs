@@ -1,3 +1,25 @@
-<div>
-    EVENT DETAILS
+<div class="contaner">
+    <div class="h1 py-2">{{event.name}}</div>
+    <div class="w-75">
+        <dl class="row">
+            <dt class="col-sm-2 p-3">
+                Description
+            </dt>
+            <dd class="col-sm-10 p-3">
+                {{event.description}}
+            </dd>
+            <dt class="col-sm-2 p-3">
+                Date
+            </dt>
+            <dd class="col-sm-10 p-3">
+                {{event.eventDate | date: 'dd/MM/yyyy'}}
+            </dd>
+        </dl>
+        <div class="h5 pb-1">
+            Participants
+        </div>
+        <ul class="list-group">
+            <li *ngFor="let user of event.participants" class="list-group-item">{{user.userName}}</li>
+        </ul>
+    </div>
 </div>

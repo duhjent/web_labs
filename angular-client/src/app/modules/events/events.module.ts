@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
 import { CoreModule } from "src/app/core/core.module";
 import { SharedModule } from "../shared/shared.module";
 import { EventItemComponent } from "./components/event-item/event-item.component";
@@ -28,7 +29,8 @@ import { EventService } from "./services/event.service";
         EventsRoutingModule,
         CoreModule,
         SharedModule,
-        CommonModule
+        CommonModule,
+        FormsModule
     ],
     providers: [
         EventService

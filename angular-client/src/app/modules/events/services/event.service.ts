@@ -50,4 +50,14 @@ export class EventService {
         const url = `${environment.apiUrl}/api/events/adduser`;
         return this.http.post<EventModel>(url, {}, { params: { 'id': '' + id, 'userName': userName } });
     }
+
+    removeUser(id: number, userName: string): Observable<EventModel> {
+        const url = `${environment.apiUrl}/api/events/removeuser`;
+        return this.http.post<EventModel>(url, {}, {params: {'id': '' + id, 'userName': userName}});
+    }
+
+    updateEvent(eventModel: EventModel): Observable<EventModel> {
+        const url = `${environment.apiUrl}/api/events`;
+        return this.http.put<EventModel>(url, eventModel);
+    }
 }

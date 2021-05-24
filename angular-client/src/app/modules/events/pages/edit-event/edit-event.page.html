@@ -1,3 +1,46 @@
-<div>
-    EDIT EVENT
+<div class="contaner">
+    <div class="h2 py-2">Edit Event</div>
+    <div>
+        <button class="btn btn-secondary" (click)="saveChanges()">Save</button>
+    </div>
+    <div class="w-75">
+        <dl class="row">
+            <dt class="col-sm-2 p-3">
+                <label for="title">
+                    Title
+                </label>
+            </dt>
+            <dd class="col-sm-10 p-3">
+                <input type="text" class="form-control" name="title" [(ngModel)]="event.name" />
+            </dd>
+            <dt class="col-sm-2 p-3">
+                <label for="description">
+                    Description
+                </label>
+            </dt>
+            <dd class="col-sm-10 p-3">
+                <textarea name="description" id="description"
+                    class="form-control" [(ngModel)]="event.description"></textarea>
+            </dd>
+            <dt class="col-sm-2 p-3">
+                Date
+            </dt>
+            <dd class="col-sm-10 p-3">
+                <input type="datetime-local" class="form-control" [(ngModel)]="event.eventDate" />
+            </dd>
+        </dl>
+        <div class="h5 pb-1">
+            Participants
+        </div>
+        <ul class="list-group pb-3">
+            <li class="list-group-item d-flex justify-content-between" *ngFor="let user of event.participants">
+                <div>{{user.userName}}</div>
+                <button class="btn btn-secondary btn-sm" (click)="removeUser(user.userName)">remove</button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+                <input type="text" class="form-control w-25" [(ngModel)]="newUserName" />
+                <button class="btn btn-add-user" (click)="addUser()">add user</button>
+            </li>
+        </ul>
+    </div>
 </div>
